@@ -15,7 +15,7 @@ body {
 #stage {
   position: relative;
   width: 1920px;
-  height: 1200px;
+  height: 1175px;
   transform-origin: top left;
   background: #ededee;
 }
@@ -352,7 +352,7 @@ body {
 
   /* ---------- süreç (2'li kolon, 6. hücre = İletişime Geçin) ----------
      750px yükseklik sınırı için kompakt                                 */
-  .m-process { padding: 16px 0 18px; }
+  .m-process { padding: 16px 0 10px; }
   .m-strip {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
