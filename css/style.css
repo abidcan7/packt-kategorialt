@@ -3,7 +3,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html, body { background: #fff; }
+html, body { background: #ededee; }
 
 body {
   font-family: "Aptos Narrow", Aptos, "Segoe UI", Arial, sans-serif;
@@ -17,7 +17,7 @@ body {
   width: 1920px;
   height: 1200px;
   transform-origin: top left;
-  background: #fff;
+  background: #ededee;
 }
 
 /* ---------- metin yardımcıları ---------- */
@@ -30,7 +30,7 @@ body {
 .bold { font-weight: 700; }
 .c-dark  { color: #333132; }
 .c-gray  { color: #777a7d; }
-.c-light { color: #ededee; }
+.c-light { color: #d3d2c1; }
 .c-red   { color: #ff5239; }
 .ta-r { text-align: right; }
 .ta-c { text-align: center; }
@@ -59,7 +59,7 @@ body {
   position: absolute;
   left: 0; top: 0;
   width: 1920px; height: 74.09px;
-  background: #d3d2c1;
+  background: transparent;
   z-index: 1;
 }
 
@@ -281,7 +281,7 @@ body {
   .m-label.ta-r { color: #777a7d; }
 
   /* ---------- bej bant ---------- */
-  .m-band { background: #d3d2c1; padding-bottom: 0; }
+  .m-band { background: transparent; padding-bottom: 0; }
   .m-row { border-top: 1px solid #777a7d; padding: 14px 24px 12px; }
   .m-row-head { display: flex; align-items: baseline; gap: 12px; }
   .m-row-title { font-size: 21px; font-weight: 700; }
@@ -315,17 +315,17 @@ body {
     margin: 0;
     align-self: center;
     justify-self: center;
-    width: 88%;
-    max-width: 200px;
-    height: 44px;
-    font-size: 15px;
+    width: 94%;
+    max-width: 150px;
+    height: 38px;
+    font-size: 12.5px;
   }
 
   /* ---------- slogan + kırmızı çizgi ---------- */
   .m-slogan {
     display: flex; justify-content: space-between;
-    padding: 12px 20px 8px;
-    font-size: 14px; font-weight: 700; color: #333132;
+    padding: 10px 16px 6px;
+    font-size: 13px; font-weight: 700; color: #333132;
   }
   .m-redline-wrap { position: relative; z-index: 2; }
   .m-redline { height: 2px; background: #ff5239; margin: 0 16px; }
@@ -337,14 +337,14 @@ body {
   }
 
   /* ---------- masa fotoğrafı (750px sınırı için kısa şerit) ---------- */
-  .m-desk { position: relative; height: 150px; overflow: hidden; }
+  .m-desk { position: relative; height: 120px; overflow: hidden; }
   .m-desk img {
     display: block;
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: 0 40%;   /* telefon sağa kayar, "Süreç" yazısı okunur kalır */
   }
-  .m-desk-num { position: absolute; left: 20px; top: 10px; color: #ededee; font-size: 20px; }
+  .m-desk-num { position: absolute; left: 20px; top: 10px; color: #d3d2c1; font-size: 20px; }
   .m-desk-title {
     position: absolute; left: 50%; top: 12px; transform: translateX(-50%);
     font-size: 18px; font-weight: 700; color: #ff5239;
@@ -352,17 +352,17 @@ body {
 
   /* ---------- süreç (2'li kolon, 6. hücre = İletişime Geçin) ----------
      750px yükseklik sınırı için kompakt                                 */
-  .m-process { padding: 20px 0 22px; }
+  .m-process { padding: 16px 0 18px; }
   .m-strip {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px 14px;
-    padding: 0 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px 10px;
+    padding: 0 12px;
   }
-  .m-step { width: min(100px, 32vw); justify-self: center; }
+  .m-step { width: min(100px, 27vw); justify-self: center; }
   .m-circle {
-    width: min(100px, 32vw);
-    height: min(100px, 32vw);
+    width: min(100px, 27vw);
+    height: min(100px, 27vw);
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #ff5239;
@@ -375,14 +375,14 @@ body {
   }
   .m-circle-brand svg { width: 74%; }
   .m-step-label {
-    margin-top: 8px;
+    margin-top: 6px;
     border-top: 1.25px solid #ff5239;
     border-bottom: 1.25px solid #ff5239;
-    padding: 5px 2px;
-    min-height: 34px;
+    padding: 4px 2px;
+    min-height: 30px;
     display: flex; align-items: center; justify-content: center;
     text-align: center;
-    font-size: 10.5px; font-weight: 700; color: #333132;
+    font-size: 9.5px; font-weight: 700; color: #333132;
   }
 }
 
