@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+<!-- iframe icinde linkler ana pencereyi yonlendirsin -->
+<base target="_top">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PACKT</title>
@@ -88,7 +90,7 @@
   <svg class="mini rv rv-fade" style="left:1403.51px; top:1028.94px;"><use href="#mini-mark"/></svg>
 
   <!-- ===================== İLETİŞİM BUTONU ===================== -->
-  <a class="cta-btn contact-btn rv rv-up" data-link="iletisim" href="#" target="_top">İletişime Geçin</a>
+  <a class="cta-btn contact-btn rv rv-up" data-link="iletisim" href="https://thepackt.co/pages/iletisim" target="_top">İletişime Geçin</a>
 
 </div>
 </div>
@@ -152,11 +154,23 @@
         <div class="m-step-label"><span>Teslimat</span></div>
       </div>
 
-      <a class="m-contact rv rv-up" data-link="iletisim" href="#" target="_top">İletişime Geçin</a>
+      <a class="m-contact rv rv-up" data-link="iletisim" href="https://thepackt.co/pages/iletisim" target="_top">İletişime Geçin</a>
     </div>
   </section>
 
 </div>
 <script src="js/main.js"></script>
-</body>
+
+<script>
+/* iframe fix: sayfa ici #linkler base target="_top" ile bozulmasin */
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (e) {
+    var h = a.getAttribute('href');
+    if (h.length < 2) { e.preventDefault(); return; }
+    var t = null;
+    try { t = document.querySelector(h); } catch (err) {}
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'auto', block: 'start' }); }
+  });
+});
+</script></body>
 </html>
